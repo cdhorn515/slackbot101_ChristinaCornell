@@ -26,7 +26,7 @@ module.exports = function(bot) {
 
   bot.registerListener('doctor', function(bot, message, slackbotCallback){
     var resp = {};
-    let pattern = new RegExp('doctor');
+    let pattern = new RegExp('doctor', 'i');
 
     if (!message.text.match(pattern)) {
       return;
